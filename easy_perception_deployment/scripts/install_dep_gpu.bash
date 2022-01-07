@@ -64,8 +64,8 @@ fi
 
 readonly CUDA_HOME=/usr/local/cuda
 
-if dpkg -L libcudnn7 &> /dev/null; then
-    readonly CUDNN_HOME=`dirname $(dpkg -L libcudnn7 | grep libcudnn.so | head -n1)`
+if dpkg -L libcudnn8 &> /dev/null; then
+    readonly CUDNN_HOME=`dirname $(dpkg -L libcudnn8 | grep libcudnn.so | head -n1)`
 elif ls ${CUDA_HOME}/include/ | grep cudnn &> /dev/null; then
     readonly CUDNN_HOME=${CUDA_HOME}
 else
