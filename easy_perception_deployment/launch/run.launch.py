@@ -22,6 +22,6 @@ def generate_launch_description():
             package='easy_perception_deployment',
             executable='processor',
             output='screen',
-            remappings=[('/processor/image_input', '/virtual_camera/image_raw')]
+            remappings=[('/processor/image_input', '/realsense/color/image_raw')]
             ),
     ])
